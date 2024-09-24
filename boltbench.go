@@ -22,11 +22,10 @@ import (
 
 var (
 	concurrency = flag.Int("concurrency", 24, "Number of concurrent goroutines")
-	benchtime   = flag.Duration("benchtime", 10*time.Second, "Bench time")
+	benchtime   = flag.Duration("benchtime", 60*time.Second, "Bench time")
 	scale       = flag.Int("scale", 1000, "Scaling factor")
 	RWMode      = flag.Bool("rwmode", true, "Read write mode")
-	initMode    = flag.Bool("init", false, "init")
-	cpuprofile  = flag.String("cpuprofile", "", "write cpu profile to file")
+	initMode    = flag.Bool("init", true, "init")
 )
 
 var (
